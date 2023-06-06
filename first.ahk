@@ -1,5 +1,5 @@
 
-
+; for showing taskview
 ~MButton::
  KeyWait, MButton			; wait for z to be released
     KeyWait, MButton, D T0.2		; and pressed again within 0.2 seconds
@@ -11,6 +11,7 @@
 	
 Return
 
+; for showing desktop
 ~RButton::
  KeyWait, RButton			; wait for z to be released
     KeyWait, RButton, D T0.2		; and pressed again within 0.2 seconds
@@ -51,7 +52,13 @@ Return
 
 ; suspend hotkeys ctrl+alt+s
 ^!s::Suspend  ; Ctrl+Alt+S
+Return
 
 
+RButton & XButton2::
+SendEvent {LWin down}{LCtrl down}{Right down}{LWin up}{LCtrl up}{Right up}  
+Return
 
-
+RButton & XButton1::
+SendEvent {LWin down}{LCtrl down}{Left down}{LWin up}{LCtrl up}{Left up}  
+Return
