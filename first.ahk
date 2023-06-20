@@ -62,3 +62,10 @@ Return
 RButton & XButton1::
 SendEvent {LWin down}{LCtrl down}{Left down}{LWin up}{LCtrl up}{Left up}  
 Return
+
+; script for horizontal script
++WheelDown::WheelRight
+Return
+
++WheelUp::WheelLeft
+Return
